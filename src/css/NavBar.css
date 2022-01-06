@@ -1,0 +1,8 @@
+.navbar {
+    background-color: #18343b;
+    display: flex;
+    position:sticky;
+    justify-content: center;
+    top: 0px;
+    height: 80px;
+  }
