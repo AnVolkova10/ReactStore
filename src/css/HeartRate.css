@@ -1,0 +1,28 @@
+section > i {
+    color: red;
+    position: absolute;
+    font-size: 68px;
+    top: 490px;
+    left: 289px;
+    animation: beat 1s infinite;
+}
+
+.heart-rate {
+    color: antiquewhite;
+    font-size: 40px;
+    position: absolute;
+    top: 540px;
+    left: 300px;
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}

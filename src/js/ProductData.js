@@ -1,5 +1,5 @@
 const ProductData = {
-    title: 'FitBit 19 - The Smartest Watch',
+    title: 'React Watch - The Smartest Watch',
     description: 'Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor.',
     colorOptions: [
         {
@@ -18,9 +18,6 @@ const ProductData = {
             styleName: 'Purple Strap',
             imageUrl: 'https://imgur.com/xSIK4M8.png'
         },
-    ],
-    featureList: [
-        "Time", "Heart Rate"
     ]
 }
 

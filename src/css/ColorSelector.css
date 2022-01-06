@@ -1,0 +1,15 @@
+.small-watch {   
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    margin-right: 10px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+}
+
+.small-watch:hover {
+    border: 2px solid rgb(146, 201, 201);
+}
+
+
+
