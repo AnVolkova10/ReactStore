@@ -1,11 +1,12 @@
 import React from 'react';
 import '../css/Description.css';
 
-function Description() {
+function Description(props) {
     return(
         <section>
-            <h1>Título</h1>
-            <h5>Párrafo</h5>
+            <h1>React Smart-Watch</h1>
+            <p>It can do ANYTHING</p>
+            {props.children}
         </section>
         
     );

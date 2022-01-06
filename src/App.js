@@ -17,20 +17,25 @@ function App() {
   return (
     <React.Fragment>
       <NavBar/>
-
+      
       <Main>
         <Watch/>
-        <Description/>
-        <ColorSelector/>
+        <Description>
+          <ColorSelector/>
 
-        <Features>
-          <Time/>
-          <HeartRate/>
-          <Weather/>
-          <Stopwatch/>
-        </Features>
+          <Features>
 
-        <BuyButton/>        
+            <Time/>
+            <HeartRate/>
+            <Weather/>
+            <Stopwatch/>
+
+          </Features>
+        
+          <BuyButton/>
+
+        </Description>
+      
       </Main>
     </React.Fragment>
   );

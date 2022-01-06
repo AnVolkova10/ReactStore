@@ -9,7 +9,3 @@ main {
     color: rgb(31, 31, 31);
   }
 
-.section {
-  display: flex;
-  flex-direction: column;
-}
