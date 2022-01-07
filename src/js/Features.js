@@ -6,7 +6,10 @@ function Features(props) {
     return(
       <section>
         <h3>Features</h3>
-        {props.children}
+        <button onClick={props.onTime}>Time</button>
+        <button onClick={props.onHeartRate} >Heart Rate</button>
+        <button onClick={props.onStopwatch}>Stopwatch</button>
+        <button onClick={props.onWeather}>Weather</button>
       </section>
     );
 }

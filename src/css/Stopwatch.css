@@ -4,3 +4,12 @@
     top: 500px;
     left: 260px;
 }
+
+.numbers {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.buttons > button {
+    color: aliceblue;
+    background-color: rgb(58, 61, 63);
+}

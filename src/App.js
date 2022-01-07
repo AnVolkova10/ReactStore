@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './css/App.css';
 import ProductData from './js/ProductData';
 import { Watch } from './js/Watch';
@@ -14,28 +14,61 @@ import { Stopwatch } from './js/Stopwatch';
 import { BuyButton } from './js/BuyButton';
 
 function App() {
+  const [showTime, setShowTime] = useState(true);
+  const [showHeartRate, setShowHeartRate] = useState(false);
+  const [showStopwatch, setShowStopwatch] = useState(false);
+  const [showWeather, setShowWeather] = useState(false);
+  
+
+  const onTime = () => {
+    setShowTime(true)
+    setShowHeartRate(false)
+    setShowStopwatch(false)
+    setShowWeather(false)
+  };
+
+  const onHeartRate = () => {
+    setShowTime(false)
+    setShowHeartRate(true)
+    setShowStopwatch(false)
+    setShowWeather(false)
+  };
+
+  const onStopwatch = () => {
+    setShowTime(false)
+    setShowHeartRate(false)
+    setShowStopwatch(true)
+    setShowWeather(false)
+  };
+
+  const onWeather = () => {
+    setShowTime(false)
+    setShowHeartRate(false)
+    setShowStopwatch(false)
+    setShowWeather(true)
+  };
+  
   return (
     <React.Fragment>
+      
       <NavBar/>
       
       <Main>
-        <Watch/>
+          <Watch/>
+          {showTime ? <Time /> : null}
+          {showHeartRate ? <HeartRate/> : null}
+          {showStopwatch ? <Stopwatch/> : null}
+          {showWeather ? <Weather/> : null}
         <Description>
           <ColorSelector/>
-
-          <Features>
-
-            <Time/>
-            <HeartRate/>
-            <Weather/>
-            <Stopwatch/>
-
-          </Features>
-        
+          <Features
+            onTime={onTime}
+            onHeartRate={onHeartRate}
+            onStopwatch={onStopwatch}
+            onWeather={onWeather}
+          />
           <BuyButton/>
-
         </Description>
-      
       </Main>
     </React.Fragment>
   );

@@ -1,6 +1,8 @@
 .watch {
+  position: relative;
     height: 70vh;
-    width: 70vh;
+    
+    
   }
 
 .time-data {
