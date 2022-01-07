@@ -11,5 +11,8 @@
     border: 2px solid rgb(146, 201, 201);
 }
 
+.default {
+    border: 2px solid teal;
+}
 
 

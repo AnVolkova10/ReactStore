@@ -6,10 +6,10 @@ function Features(props) {
     return(
       <section>
         <h3>Features</h3>
-        <button onClick={props.onTime}>Time</button>
-        <button onClick={props.onHeartRate} >Heart Rate</button>
-        <button onClick={props.onStopwatch}>Stopwatch</button>
-        <button onClick={props.onWeather}>Weather</button>
+        <button onClick={props.onTime} className={props.showTime ? 'selected': ''}>Time</button>
+        <button onClick={props.onHeartRate} className={props.showHeartRate ? 'selected': ''}>Heart Rate</button>
+        <button onClick={props.onStopwatch} className={props.showStopwatch ? 'selected': ''}>Stopwatch</button>
+        <button onClick={props.onWeather} className={props.showWeather ? 'selected': ''}>Weather</button>
       </section>
     );
 }

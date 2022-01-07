@@ -14,6 +14,7 @@ import { Stopwatch } from './js/Stopwatch';
 import { BuyButton } from './js/BuyButton';
 
 function App() {
+
   //Features
   const [showTime, setShowTime] = useState(true);
   const [showHeartRate, setShowHeartRate] = useState(false);
@@ -59,11 +60,12 @@ function App() {
   const [showBlue, setShowBlue]  = useState(false);
   const [showPurple, setShowPurple]  = useState(false);
   
+  
   const onChangeBlack = () => {
     setShowBlack(true);
     setShowRed(false);
     setShowBlue(false);
-    setShowPurple(false)
+    setShowPurple(false);
   }
 
   const onChangeRed = () => {
@@ -85,7 +87,6 @@ function App() {
     setShowRed(false);
     setShowBlue(false);
     setShowPurple(true)
-    
   }
 
 
@@ -115,6 +116,11 @@ function App() {
             onChangeRed={onChangeRed}
             onChangeBlue={onChangeBlue}
             onChangePurple={onChangePurple}
+            showRed={showRed}
+            showBlack={showBlack}
+            showBlue={showBlue}
+            showPurple={showPurple}
+            
           />
             
           <Features
@@ -122,6 +128,10 @@ function App() {
             onHeartRate={onHeartRate}
             onStopwatch={onStopwatch}
             onWeather={onWeather}
+            showTime={showTime}
+            showHeartRate={showHeartRate}
+            showStopwatch={showStopwatch}
+            showWeather={showWeather}
           />
           <BuyButton/>
         </Description>
