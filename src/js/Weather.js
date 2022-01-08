@@ -25,6 +25,7 @@ class Weather extends React.Component {
   getWeather = async (latitude, longitude) => { 
     const api_call = await fetch(`//api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`);
     const data = await api_call.json();    
+    
     this.setState({
       lat: latitude,
       lon: longitude,
@@ -60,38 +61,25 @@ class Weather extends React.Component {
   
 
   render() {
-    const { city, temperatureC, temperatureF, icon, sunrise, sunset} = this.state;
+    const { city, temperatureC, icon} = this.state;
     if (city) {
       return (
-        <div className="App">  
+        <div className="weather">  
           <div className="weather-box">
-            <div className="weather-item">{city}</div>      
-            <div className="weather-item">{temperatureC} &deg;C <span className="slash">/</span> {temperatureF} &deg;F</div>    
-            <div>
+          <div>
               <img className="weather-icon" src={`http://openweathermap.org/img/w/${icon}.png`} alt="weather icon"/>
             </div>    
-            <div className="weather-item">
-              <span>sunrise: {sunrise}</span>
-            </div>
-            <div className="weather-item">
-              <span>sunset: {sunset}</span>
-            </div>
+            <div className="weather-item">{temperatureC} &deg;C</div>    
+            <div className="weather-item">{city}</div>      
           </div>
         </div>
       );      
     }
     else {
       return (
-        <div>Loading...</div>
+        <div></div>
       )
     }  
-    
-
-
-    
-    return (
-        <div className='weather'></div>
-    );
   }
 }
 

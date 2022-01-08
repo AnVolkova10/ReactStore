@@ -1,6 +1,6 @@
 const ProductData = {
-    title: 'React Watch - The Smartest Watch',
-    description: 'Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor.',
+    title: 'React Watch - The Smartest One',
+    description: `Here we are!!!111 testing a React App. Please use me in a maximized browser mode :c, everytime you use me in windows mode a kitten dies y yo me rompo >_<`,
     colorOptions: [
         {
             styleName: 'Black Strap',

@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import '../css/Stopwatch.css';
 
 function Stopwatch() {
-    
-    
+        
     const [time, setTime] = useState(0);
     const [running, setRunning] = useState(false);
 
-    //Stopwatch functions
+    //Stopwatch functions //////////
     useEffect(() => {
         let interval;
         if (running) {
@@ -19,11 +18,8 @@ function Stopwatch() {
         }
         return () => clearInterval(interval);
       }, [running]);
-    
-      //Stopwatch button
-      
-    return(
-      
+ 
+    return(      
         <div key={0} className="stopwatch">
             <div className="numbers">
                 <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>

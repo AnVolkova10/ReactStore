@@ -1,0 +1,13 @@
+.weather {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 40px;
+    color: white;
+    display: flex;
+    position: fixed;
+    left: 280px;
+    top: 400px;
+}
+
+.weather-icon {
+    width: 80px;
+}

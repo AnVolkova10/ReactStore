@@ -1,0 +1,9 @@
+.time-data {
+    position: absolute;
+    left: 255px;
+    top: 450px;
+    font-size: 80px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: rgb(255, 255, 255);
+}
+

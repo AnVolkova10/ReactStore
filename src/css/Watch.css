@@ -1,19 +1,7 @@
 .watch {
   position: relative;
-    height: 70vh;
-    
-    
+  height: 70vh;
   }
 
-.time-data {
-  position: absolute;
-  color: wheat;
-  margin: auto;
-  top: 500px;
-  left: 270px;
-  text-align: center;
-  font-size:48px;
-  z-index: 3;
-  
-}
+
   

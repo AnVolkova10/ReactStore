@@ -1,3 +1,14 @@
 .buy-now {
+    font-family: 'Signika Negative', sans-serif;
+    box-shadow:inset 0px 34px 0px -15px #b54b3a;
+    font-size: 30px;
     background-color: rgb(143, 44, 44);
+    margin-top: 20px;
+    padding: 3px 10px;
+}
+
+
+
+.buy-now:hover {
+    background-color: rgb(104, 24, 24);
 }

@@ -2,17 +2,18 @@ div > i {
     color: red;
     position: absolute;
     font-size: 68px;
-    top: 490px;
+    top: 430px;
     left: 289px;
     animation: beat 1s infinite;
 }
 
 .heart-rate {
+    font-family: 'Open Sans Condensed', sans-serif;
     color: antiquewhite;
-    font-size: 40px;
+    font-size: 50px;
     position: absolute;
-    top: 540px;
-    left: 300px;
+    top: 480px;
+    left: 305px;
 }
 
 @keyframes beat {

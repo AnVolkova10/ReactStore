@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from 'react';
-import './css/App.css';
+import React, {useState} from 'react';
 import ProductData from './js/ProductData';
 import { Watch } from './js/Watch';
 import { ColorSelector } from './js/ColorSelector';
@@ -15,7 +14,7 @@ import { BuyButton } from './js/BuyButton';
 
 function App() {
 
-  //Features
+  //Features ///////////////
   const [showTime, setShowTime] = useState(true);
   const [showHeartRate, setShowHeartRate] = useState(false);
   const [showStopwatch, setShowStopwatch] = useState(false);
@@ -27,21 +26,18 @@ function App() {
     setShowStopwatch(false)
     setShowWeather(false)
   };
-
   const onHeartRate = () => {
     setShowTime(false)
     setShowHeartRate(true)
     setShowStopwatch(false)
     setShowWeather(false)
   };
-
   const onStopwatch = () => {
     setShowTime(false)
     setShowHeartRate(false)
     setShowStopwatch(true)
     setShowWeather(false)
   };
-
   const onWeather = () => {
     setShowTime(false)
     setShowHeartRate(false)
@@ -49,7 +45,7 @@ function App() {
     setShowWeather(true)
   };
   
-  //Color Selector
+  //Color Selector ////////////////
   const black = ProductData.colorOptions[0].imageUrl;
   const red = ProductData.colorOptions[1].imageUrl;
   const blue = ProductData.colorOptions[2].imageUrl;
@@ -60,28 +56,24 @@ function App() {
   const [showBlue, setShowBlue]  = useState(false);
   const [showPurple, setShowPurple]  = useState(false);
   
-  
   const onChangeBlack = () => {
     setShowBlack(true);
     setShowRed(false);
     setShowBlue(false);
     setShowPurple(false);
   }
-
   const onChangeRed = () => {
     setShowBlack(false);
     setShowRed(true);
     setShowBlue(false);
     setShowPurple(false)
   }
-  
   const onChangeBlue = () => {
     setShowBlack(false);
     setShowRed(false);
     setShowBlue(true);
     setShowPurple(false)
   }
-  
   const onChangePurple = () => {
     setShowBlack(false);
     setShowRed(false);
@@ -89,16 +81,10 @@ function App() {
     setShowPurple(true)
   }
 
-  
-  
-
-
-
   return (
     <React.Fragment>
       
       <NavBar/>
-      
       <Main>
           <Watch
             black={black}
@@ -110,10 +96,12 @@ function App() {
             showBlue={showBlue}
             showPurple={showPurple}
           />
+
           {showTime ? <Time /> : null}
           {showHeartRate ? <HeartRate/> : null}
           {showStopwatch ? <Stopwatch/> : null}
           {showWeather ? <Weather/> : null}
+
         <Description>
           <ColorSelector
             onChangeBlack={onChangeBlack}
@@ -124,7 +112,6 @@ function App() {
             showBlack={showBlack}
             showBlue={showBlue}
             showPurple={showPurple}
-            
           />
             
           <Features
@@ -137,6 +124,7 @@ function App() {
             showStopwatch={showStopwatch}
             showWeather={showWeather}
           />
+  
           <BuyButton/>
         </Description>
       </Main>
