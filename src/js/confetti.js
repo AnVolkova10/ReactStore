@@ -28,7 +28,7 @@ var confetti = {
 	var supportsAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame;
 	var colors = ["rgba(30,144,255,", "rgba(107,142,35,", "rgba(255,215,0,", "rgba(255,192,203,", "rgba(106,90,205,", "rgba(173,216,230,", "rgba(238,130,238,", "rgba(152,251,152,", "rgba(70,130,180,", "rgba(244,164,96,", "rgba(210,105,30,", "rgba(220,20,60,"];
 	var streamingConfetti = false;
-	var animationTimer = null;
+	var animationTimer;
 	var pause = false;
 	var lastFrameTime = Date.now();
 	var particles = [];
@@ -117,7 +117,7 @@ var confetti = {
 		var count = confetti.maxCount;
 		if (min) {
 			if (max) {
-				if (min == max)
+				if (min === max)
 					count = particles.length + max;
 				else {
 					if (min > max) {
@@ -164,7 +164,7 @@ var confetti = {
 
 	function drawParticles(context) {
 		var particle;
-		var x, y, x2, y2;
+		var x, /*y,*/ x2, y2;
 		for (var i = 0; i < particles.length; i++) {
 			particle = particles[i];
 			context.beginPath();
