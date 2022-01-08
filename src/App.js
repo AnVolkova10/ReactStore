@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './css/App.css';
 import ProductData from './js/ProductData';
 import { Watch } from './js/Watch';
@@ -88,6 +88,10 @@ function App() {
     setShowBlue(false);
     setShowPurple(true)
   }
+
+  
+  
+
 
 
   return (

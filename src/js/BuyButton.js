@@ -3,7 +3,7 @@ import '../css/BuyButton.css';
 
 function BuyButton() {
     return(
-        <button>BUY NOW!</button>
+        <button className='buy-now'>BUY NOW!</button>
     );
 }
 

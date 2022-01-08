@@ -1,9 +1,8 @@
-import React from 'react';
-import '../css/Weather.css';
+import React, { Component } from 'react';
+import './App.css';
 import moment from 'moment';
 
-class Weather extends React.Component {
-  
+class App extends Component {
   state = {
     lat: undefined,
     lon: undefined,  
@@ -57,9 +56,7 @@ class Weather extends React.Component {
     clearInterval(this.timerID);
   }
 
-  
-
-  render() {
+  render() {    
     const { city, temperatureC, temperatureF, icon, sunrise, sunset} = this.state;
     if (city) {
       return (
@@ -84,15 +81,8 @@ class Weather extends React.Component {
       return (
         <div>Loading...</div>
       )
-    }  
-    
-
-
-    
-    return (
-        <div className='weather'></div>
-    );
+    }    
   }
 }
 
-export {Weather};
+export default App;
