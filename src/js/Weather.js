@@ -67,7 +67,7 @@ class Weather extends React.Component {
         <div className="weather">  
           <div className="weather-box">
           <div>
-              <img className="weather-icon" src={`http://openweathermap.org/img/w/${icon}.png`} alt="weather icon"/>
+              <img className="weather-icon" src={`https://openweathermap.org/img/w/${icon}.png`} alt="weather icon"/>
             </div>    
             <div className="weather-item">{temperatureC} &deg;C</div>    
             <div className="weather-item">{city}</div>      
